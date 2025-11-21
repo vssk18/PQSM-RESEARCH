@@ -1,0 +1,12 @@
+PQSM ADVANCED STATISTICAL ANALYSIS
+======================================================================
+
+                    kem  g1_slo_pass  slo_pass_rate  g2_envelope_pass  safe_area_score  g3_throughput_pass  max_elasticity  all_gates_pass  combined_score
+        NTRU-Prime-hrss         True            1.0              True              1.0                True        0.016113            True        0.695166
+             ML-KEM-768         True            1.0              True              1.0                True        0.019368            True        0.694190
+             ML-KEM-512         True            1.0              True              1.0                True        0.022773            True        0.693168
+                HQC-128         True            1.0              True              1.0                True        0.030685            True        0.690794
+                BIKE-L1         True            1.0              True              1.0                True        0.034045            True        0.689787
+Classic-McEliece-348864        False            0.0              True              1.0                True        0.054999           False        0.383500
+
+Generated using methodology from comprehensive document

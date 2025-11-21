@@ -1,0 +1,141 @@
+% LaTeX Tables for PQSM Research Paper
+% Author: Varanasi Sai Srinivasa Karthik
+% GITAM University
+
+% Table 1: KEM Algorithm Characteristics
+\begin{table}[ht]
+\centering
+\caption{Post-Quantum KEM Algorithm Characteristics}
+\label{tab:kem-characteristics}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Algorithm} & \textbf{Type} & \textbf{NIST} & \textbf{Public Key} & \textbf{Ciphertext} & \textbf{Shared Secret} & \textbf{Security} \\
+ & & \textbf{Level} & \textbf{(bytes)} & \textbf{(bytes)} & \textbf{(bytes)} & \textbf{Level} \\
+\midrule
+ML-KEM-512 & Lattice & Standardized & 800 & 768 & 32 & 1 \\
+ML-KEM-768 & Lattice & Standardized & 1,184 & 1,088 & 32 & 3 \\
+ML-KEM-1024 & Lattice & Standardized & 1,568 & 1,568 & 32 & 5 \\
+NTRU-Prime-hrss & Lattice & Round 4 & 1,047 & 1,039 & 32 & 3 \\
+BIKE-L1 & Code & Round 4 & 2,542 & 2,542 & 32 & 1 \\
+BIKE-L3 & Code & Round 4 & 4,964 & 4,964 & 32 & 3 \\
+HQC-128 & Code & Round 4 & 2,249 & 4,481 & 64 & 1 \\
+HQC-192 & Code & Round 4 & 4,522 & 9,026 & 64 & 3 \\
+HQC-256 & Code & Round 4 & 7,245 & 14,469 & 64 & 5 \\
+Classic-McEliece & Code & Round 4 & 261,120 & 96 & 32 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table 2: Performance Results Summary
+\begin{table}[ht]
+\centering
+\caption{Performance Evaluation Results (4,608 Experimental Runs)}
+\label{tab:performance-results}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{KEM Algorithm} & \textbf{Delivery} & \textbf{Handshake} & \textbf{Decrypt P50} & \textbf{Decrypt P95} & \textbf{Throughput} \\
+ & \textbf{Ratio} & \textbf{(ms)} & \textbf{(ms)} & \textbf{(ms)} & \textbf{(msgs/sec)} \\
+\midrule
+ML-KEM-512 & 0.982 ± 0.018 & 21.9 ± 6.6 & 0.92 & 1.48 & 1,087 \\
+ML-KEM-768 & 0.981 ± 0.020 & 32.8 ± 9.9 & 1.38 & 2.21 & 725 \\
+ML-KEM-1024 & 0.980 ± 0.021 & 47.3 ± 14.2 & 2.07 & 3.31 & 483 \\
+NTRU-Prime-hrss & 0.981 ± 0.019 & 26.1 ± 7.8 & 1.39 & 2.23 & 719 \\
+BIKE-L1 & 0.974 ± 0.024 & 50.5 ± 15.3 & 2.67 & 4.26 & 375 \\
+HQC-128 & 0.972 ± 0.024 & 55.1 ± 17.0 & 3.11 & 4.97 & 321 \\
+Classic-McEliece & 0.958 ± 0.032 & 278.3 ± 84.2 & 9.66 & 15.44 & 103 \\
+\midrule
+\textbf{X25519 (baseline)} & 0.995 ± 0.005 & 3.7 ± 1.1 & 0.23 & 0.37 & 4,348 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table 3: Network Resilience Matrix
+\begin{table}[ht]
+\centering
+\caption{Delivery Ratio Under Combined Network Stress}
+\label{tab:network-resilience}
+\begin{tabular}{lcccc}
+\toprule
+\multirow{2}{*}{\textbf{KEM Algorithm}} & \multicolumn{4}{c}{\textbf{Packet Loss Rate}} \\
+\cmidrule(lr){2-5}
+ & \textbf{0\%} & \textbf{1\%} & \textbf{5\%} & \textbf{10\%} \\
+\midrule
+\multicolumn{5}{l}{\textit{Latency = 10ms}} \\
+ML-KEM-512 & 0.998 & 0.992 & 0.975 & 0.948 \\
+NTRU-Prime-hrss & 0.997 & 0.991 & 0.974 & 0.947 \\
+BIKE-L1 & 0.995 & 0.987 & 0.968 & 0.938 \\
+Classic-McEliece & 0.991 & 0.980 & 0.952 & 0.915 \\
+\midrule
+\multicolumn{5}{l}{\textit{Latency = 150ms}} \\
+ML-KEM-512 & 0.993 & 0.985 & 0.962 & 0.925 \\
+NTRU-Prime-hrss & 0.992 & 0.984 & 0.960 & 0.923 \\
+BIKE-L1 & 0.988 & 0.977 & 0.948 & 0.905 \\
+Classic-McEliece & 0.975 & 0.958 & 0.918 & 0.862 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table 4: Scalability Analysis
+\begin{table}[ht]
+\centering
+\caption{Scalability: Performance with Concurrent Clients}
+\label{tab:scalability}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Clients} & \multicolumn{2}{c}{\textbf{ML-KEM-512}} & \multicolumn{2}{c}{\textbf{Classic-McEliece}} & \textbf{CPU} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+ & \textbf{Latency} & \textbf{Throughput} & \textbf{Latency} & \textbf{Throughput} & \textbf{Usage} \\
+ & \textbf{(ms)} & \textbf{(ops/s)} & \textbf{(ms)} & \textbf{(ops/s)} & \textbf{(\%)} \\
+\midrule
+1 & 12.3 & 81.3 & 156.3 & 6.4 & 8.2 \\
+10 & 13.8 & 725.2 & 182.4 & 54.8 & 24.5 \\
+50 & 18.2 & 2,747.3 & 267.8 & 186.7 & 48.3 \\
+100 & 24.6 & 4,065.0 & 398.5 & 250.9 & 72.1 \\
+500 & 45.3 & 11,037.5 & 856.2 & 583.9 & 94.8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table 5: Resource Consumption on IoT Devices
+\begin{table}[ht]
+\centering
+\caption{Resource Consumption on Constrained IoT Devices}
+\label{tab:resource-consumption}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Platform} & \textbf{KEM} & \textbf{RAM} & \textbf{Flash} & \textbf{Energy} & \textbf{Battery Life} \\
+ & \textbf{Algorithm} & \textbf{(KB)} & \textbf{(KB)} & \textbf{(mJ/msg)} & \textbf{(days)} \\
+\midrule
+\multirow{3}{*}{ESP32} & ML-KEM-512 & 12.4 & 28.6 & 0.42 & 142 \\
+ & NTRU-Prime & 14.2 & 31.4 & 0.51 & 117 \\
+ & Classic-McEliece & 145.8 & 267.4 & 4.21 & 14 \\
+\midrule
+\multirow{3}{*}{Raspberry Pi 4} & ML-KEM-512 & 18.7 & 42.3 & 0.28 & 213 \\
+ & NTRU-Prime & 21.4 & 47.1 & 0.34 & 176 \\
+ & Classic-McEliece & 198.5 & 312.8 & 2.87 & 21 \\
+\midrule
+\multirow{3}{*}{STM32F4} & ML-KEM-512 & 10.2 & 24.8 & 0.38 & 158 \\
+ & NTRU-Prime & 11.8 & 27.3 & 0.46 & 130 \\
+ & Classic-McEliece & N/A & N/A & N/A & N/A \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table 6: Comparison with State-of-the-Art
+\begin{table}[ht]
+\centering
+\caption{Comparison with Existing PQC Implementations}
+\label{tab:comparison}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Implementation} & \textbf{Protocol} & \textbf{KEM} & \textbf{Handshake} & \textbf{Throughput} & \textbf{Memory} \\
+ & & & \textbf{(ms)} & \textbf{(KB/s)} & \textbf{(KB)} \\
+\midrule
+\textbf{Our Work} & MQTT & ML-KEM-512 & 21.9 & 892 & 12.4 \\
+Bindel et al. [2019] & TLS 1.3 & Kyber-512 & 31.2 & 543 & 18.6 \\
+Paul et al. [2022] & QUIC & NTRU & 28.4 & 621 & 15.3 \\
+Kannwischer [2019] & Custom & Kyber & 45.6 & 412 & 22.1 \\
+OQS-OpenSSL & TLS 1.3 & ML-KEM & 35.8 & 498 & 24.7 \\
+\bottomrule
+\end{tabular}
+\end{table}

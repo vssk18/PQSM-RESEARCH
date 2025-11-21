@@ -1,0 +1,46 @@
+% main.tex - PQSM Research Paper
+\documentclass[conference]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[nameinlink]{cleveref}
+\usepackage{placeins}
+
+\usepackage[font=small,labelsep=space]{caption}
+\captionsetup[table]{skip=8pt,belowskip=0pt,aboveskip=6pt,justification=centering}
+\captionsetup[figure]{skip=8pt,belowskip=0pt,aboveskip=6pt,justification=centering}
+
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+\graphicspath{{figs/}}
+\numberwithin{equation}{section}
+\input{sections/macros}
+
+\title{Post-Quantum Secure Messaging over MQTT: End-to-End Evaluation Under Network Impairments}
+\author{\IEEEauthorblockN{Varanasi Sai Srinivasa Karthik}
+\IEEEauthorblockA{GITAM University, Hyderabad}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a comprehensive evaluation of post-quantum key encapsulation mechanisms (KEMs) for MQTT messaging under realistic network impairments. Through 4,608 experimental runs covering 256 unique network scenarios, we measure user-visible metrics including handshake time, delivery ratio, decrypt latency, and application goodput.
+\end{abstract}
+
+\input{sections/01_starting}
+\FloatBarrier
+\input{sections/02_results}
+\FloatBarrier
+\input{sections/03_end}
+
+\end{document}

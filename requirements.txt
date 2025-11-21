@@ -1,0 +1,21 @@
+# PQSM Research Dependencies
+# Python 3.11+ required
+
+# Data Processing
+pandas==2.2.3
+numpy==2.0.2
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+scipy==1.14.1
+
+# Cryptography (optional, for advanced_kem.py)
+cryptography==43.0.3
+
+# MQTT (optional, for full implementation)
+paho-mqtt==2.1.0
+
+# Optional: Post-quantum cryptography
+# Requires system installation of liboqs
+# pip install pyoqs

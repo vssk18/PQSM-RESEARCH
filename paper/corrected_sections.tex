@@ -1,0 +1,28 @@
+% CORRECTED Paper Sections - Accurate Numbers (4,608 runs)
+
+% FOR ABSTRACT - Replace with:
+\begin{abstract}
+We present a comprehensive evaluation of post-quantum key encapsulation mechanisms (KEMs) for MQTT messaging under realistic network impairments. Through 4,608 experimental runs covering 256 unique network scenarios, we measure user-visible metrics including handshake time $T_h$, delivery ratio $D$, decrypt latency $t_{\text{dec}}$, and application goodput $G$. Testing 6 NIST PQC candidates across systematically varied conditions (latency 10-150ms, loss 0-10\%, payloads 128-1024 bytes, rates 1-10 Hz), we introduce three novel decision metrics: safe-area score $\mathcal{A}_{\geq 0.95}$ quantifying the network envelope maintaining 95\% delivery, loss elasticity $\mathcal{E}_{G,p}$ capturing throughput sensitivity, and a three-gate selection framework combining setup SLO compliance, reliability envelope, and throughput stability. Results show NTRU-Prime-hrss optimal overall, ML-KEM-512 best for handshake performance (21.9ms median), while Classic-McEliece fails the 100ms SLO gate despite highest security. Our contributions include distributional analysis beyond means, operator-actionable decision procedures, and evidence that transport effects dominate cryptographic costs in typical IoT deployments.
+\end{abstract}
+
+% FOR INTRODUCTION - Key paragraph:
+\paragraph{Contributions and Scale}
+We conducted 4,608 full experimental runs (6 KEMs $\times$ 256 network scenarios $\times$ 3 replicates) measuring complete MQTT sessions from TCP connection through sustained messaging. Each KEM received 768 runs ensuring uniform coverage without Simpson's paradox. Our 622,080 total messages provide statistically significant results with 95\% confidence intervals throughout.
+
+% FOR METHODS SECTION - Replace grid description:
+\subsection{Experimental Grid}
+Our experimental design covers:
+\begin{itemize}
+\item \textbf{KEMs}: ML-KEM-512, ML-KEM-768, NTRU-Prime-hrss, BIKE-L1, HQC-128, Classic-McEliece-348864 (6 algorithms)
+\item \textbf{Network Latency}: $L \in \{10, 50, 100, 150\}$ ms (4 levels)
+\item \textbf{Packet Loss}: $p \in \{0, 1, 5, 10\}\%$ (4 levels)
+\item \textbf{Payload Size}: $B \in \{128, 256, 512, 1024\}$ bytes (4 levels)
+\item \textbf{Message Rate}: $f \in \{1, 2, 5, 10\}$ Hz (4 levels)
+\item \textbf{Replication}: 3 runs per configuration
+\end{itemize}
+
+This yields $6 \times 4 \times 4 \times 4 \times 4 = 1,536$ unique configurations with 3 replicates each, totaling \textbf{4,608 experimental runs}.
+
+% FOR RESULTS - Opening statement:
+\section{Results}
+Analysis of 4,608 experimental runs reveals clear performance stratification among PQC KEMs. With 768 runs per algorithm ensuring statistical significance, we present distributional results beyond simple means.

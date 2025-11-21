@@ -1,0 +1,7 @@
+kem_algorithm,invalid_tag_count,replay_count,parse_fail_count
+BIKE-L1,74,37,12
+Classic-McEliece-348864,103,39,25
+HQC-128,85,44,14
+ML-KEM-512,68,29,15
+ML-KEM-768,60,40,19
+NTRU-Prime-hrss,84,30,11

@@ -1,0 +1,9 @@
+,delivery_ratio,delivery_ratio,handshake_ms,handshake_ms,p50_decrypt_ms,p50_decrypt_ms,p95_decrypt_ms,p95_decrypt_ms,messages_sent,messages_received
+,mean,std,mean,std,mean,std,mean,std,sum,sum
+kem_algorithm,,,,,,,,,,
+BIKE-L1,0.974,0.024,50.495,15.293,2.665,0.399,4.263,0.684,103680,100925
+Classic-McEliece-348864,0.958,0.032,278.318,84.225,9.656,1.423,15.438,2.356,103680,99304
+HQC-128,0.972,0.024,55.15,16.98,3.108,0.464,4.974,0.804,103680,100742
+ML-KEM-512,0.982,0.018,21.913,6.57,0.922,0.14,1.479,0.24,103680,101866
+ML-KEM-768,0.981,0.02,32.849,9.904,1.378,0.209,2.214,0.358,103680,101648
+NTRU-Prime-hrss,0.981,0.019,26.067,7.808,1.392,0.191,2.234,0.326,103680,101783
