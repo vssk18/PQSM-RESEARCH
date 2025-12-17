@@ -174,7 +174,7 @@ pdflatex main.tex
 @article{karthik2025pqsm,
   title={Post-Quantum Secure Messaging over MQTT: 
          End-to-End Evaluation Under Network Impairments},
-  author={Varanasi, Sai Srinivasa Karthik},
+  author={Varanasi Sai Srinivasa Karthik},
   journal={TechRxiv Preprint},
   year={2025},
   doi={10.36227/techrxiv.176425515.57150749/v1},
