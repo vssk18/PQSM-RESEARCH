@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Varanasi"
+    given-names: "Sai Srinivasa Karthik"
+    email: "varanasikarthik44@gmail.com"
+    affiliation: "GITAM University, Hyderabad"
+title: "Post-Quantum Secure Messaging over MQTT: End-to-End Evaluation Under Network Impairments"
+version: 1.0.0
+date-released: 2024-11-21
+url: "https://github.com/vssk18/PQSM-RESEARCH"
+repository-code: "https://github.com/vssk18/PQSM-RESEARCH"
+license: MIT
+keywords:
+  - post-quantum cryptography
+  - MQTT
+  - IoT security
+  - key encapsulation mechanisms
+  - network simulation
