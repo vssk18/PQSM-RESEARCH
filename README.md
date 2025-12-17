@@ -169,14 +169,17 @@ pdflatex main.tex
 
 ## 📝 Citation
 
+**TechRxiv Preprint**: [10.36227/techrxiv.176425515.57150749/v1](https://doi.org/10.36227/techrxiv.176425515.57150749/v1)
 ```bibtex
-@inproceedings{karthik2025pqsm,
+@article{karthik2025pqsm,
   title={Post-Quantum Secure Messaging over MQTT: 
          End-to-End Evaluation Under Network Impairments},
-  author={Karthik, Varanasi Sai Srinivasa},
-  booktitle={Proceedings of IEEE/ACM Conference},
+  author={Varanasi, Sai Srinivasa Karthik},
+  journal={TechRxiv Preprint},
   year={2025},
-  organization={GITAM University}
+  doi={10.36227/techrxiv.176425515.57150749/v1},
+  institution={GITAM University, Hyderabad},
+  note={Under review at IEEE Transactions on Information Forensics and Security}
 }
 ```
 
