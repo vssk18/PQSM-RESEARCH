@@ -196,11 +196,24 @@ pdflatex main.tex
 - MQTT broker with full PQC integration
 - Advanced statistical analysis suite
 
-## ⚠️ Data Integrity Notes
+## ⚠️ Limitations & Transparency
 
-- All metrics derived from actual experimental runs
+### Methodology Limitations
+- Bernoulli loss model (not bursty/correlated losses)
+- Single broker instance (not distributed deployment)
+- Python orchestration for research purposes (not production-ready)
+- Metrics derived from simulation profiles with realistic parameters
+
+### Implementation Notes
+- Uses liboqs C implementations for cryptographic operations
+- Python wrapper is NOT constant-time and not suitable for production
+- Side-channel resistance limited to underlying liboqs guarantees
+- No formal security proofs provided
+
+### Data Integrity
+- All metrics derived from systematic experimental grid
 - Conservative fallback estimators used only when columns missing
-- Relative orderings preserved under any data synthesis
+- Relative orderings preserved under simulation parameters
 - Full transparency in `advanced_report.txt`
 
 ## 📧 Contact
